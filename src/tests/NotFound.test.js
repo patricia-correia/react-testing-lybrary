@@ -2,7 +2,7 @@ import React from 'react';
 import { screen, render } from '@testing-library/react';
 import NotFound from '../pages/NotFound';
 
-describe('', () => {
+describe('testando o conteúdo da pagina Not Found', () => {
   test('o titulo deve está na tela em um h2', () => {
     render(<NotFound />);
     expect(screen
