@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 import App from '../App';
 import renderWithRoutes from '../renderWithRouter';
 
-describe('', () => {
+describe('Testando a Pokedex', () => {
   test('Teste se a página contém um h2 com o texto Encountered pokémons', () => {
     renderWithRoutes(<App />);
     const heading = (screen
@@ -29,12 +29,12 @@ describe('', () => {
     const caterpie = screen.getByText(/Caterpie/i);
     expect(caterpie).toBeInTheDocument();
   });
-  test('', () => {
+  test('Teste se é mostrado apenas um pokémon por vez', () => {
     renderWithRoutes(<App />);
     const everyPokemons = screen.getAllByTestId('pokemon-name');
     expect(everyPokemons).toHaveLength(1);
   });
-  test('', () => {
+  test('Teste se a Pokédex tem os botões de filtro', () => {
     renderWithRoutes(<App />);
     const pokemonsTypeBtn = screen.getAllByTestId('pokemon-type-button');
     const all = 7;
@@ -64,7 +64,7 @@ describe('', () => {
     expect(dragon[0]).toBeInTheDocument();
     expect(dragon).toHaveLength(1);
   });
-  test('', () => {
+  test('Teste se a Pokédex contém um botão para resetar o filtro', () => {
     renderWithRoutes(<App />);
     const allButton = screen.getByRole('button', { name: /All/i });
     expect(allButton).toBeInTheDocument();
